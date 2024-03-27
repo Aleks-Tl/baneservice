@@ -513,8 +513,16 @@ a {
 }
 
 .hero {
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: 732px 1048px;
   background-color: var(--primary-bs-dark-green);
   padding-top: 64px;
+}
+@media (max-width: 1200px) {
+  .hero {
+    background-size: 0 0;
+  }
 }
 .hero__wrap {
   display: -webkit-box;
@@ -598,6 +606,9 @@ a {
 .hero__btn {
   padding: 16px 80px;
 }
+.hero__btn:hover {
+  background-color: var(--primary-bs-dark-green);
+}
 @media (max-width: 480px) {
   .hero__btn {
     width: 100%;
@@ -659,9 +670,10 @@ a {
 .vacancies {
   padding-top: 137px;
   padding-bottom: 400px;
-  background-position: center bottom;
-  background-size: cover;
+  background-position: right -395px, center bottom;
+  background-size: 441px 1594px, cover;
   background-repeat: no-repeat;
+  background-color: var(--primary-bs-sand);
 }
 @media (max-width: 1200px) {
   .vacancies {
@@ -750,6 +762,7 @@ a {
   text-transform: uppercase;
   color: var(--gray-white);
   padding: 8px 16px;
+  background-color: var(--primary-bs-dark-green);
 }
 @media (max-width: 768px) {
   .vacancies__btn {
@@ -1048,6 +1061,9 @@ a {
 }
 
 .om-oss {
+  background-repeat: no-repeat;
+  background-size: 542px 480px;
+  background-position: right 130%;
   background-color: var(--primary-bs-sand);
   padding: 160px 0;
 }
@@ -1059,6 +1075,11 @@ a {
 @media (max-width: 992px) {
   .om-oss {
     padding: 80px 0;
+  }
+}
+@media (max-width: 768px) {
+  .om-oss {
+    background-size: 0 0;
   }
 }
 .om-oss__wrap {
@@ -1616,6 +1637,11 @@ a {
   transition: all 0.3s ease 0s;
   margin: 0 auto;
 }
+@media (max-width: 992px) {
+  .work .swiper-slide {
+    max-width: 640px;
+  }
+}
 .work .swiper-slide-active {
   background: var(--primary-bs-light-green);
   -webkit-transform: scale(1.1);
@@ -1623,19 +1649,26 @@ a {
   transform: scale(1.1);
   border: none;
 }
+@media (max-width: 992px) {
+  .work .swiper-slide-active {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
 
 .testimonials {
   padding-top: 55px;
   padding-bottom: 403px;
-  background-image: url("../img/backgroung-main.png");
-  background-position: center bottom;
+  background-position: left 390px, center bottom;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 488px 590px, cover;
   background-color: var(--primary-bs-sand);
 }
 @media (max-width: 1200px) {
   .testimonials {
     padding-bottom: 300px;
+    background-size: 0 0, cover;
   }
 }
 @media (max-width: 992px) {

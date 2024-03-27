@@ -20646,20 +20646,24 @@ if (document.querySelectorAll('.hero').length > 0) {
 // Slider for work section ========================================================================================================================================================
 
 if (document.querySelectorAll('.work').length > 0) {
-  const swiper = new swiper__WEBPACK_IMPORTED_MODULE_5__["default"]('.work__slider', {
+  const workSwiper = new swiper__WEBPACK_IMPORTED_MODULE_5__["default"]('.work__slider', {
     modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_6__.Mousewheel],
     slidesPerView: 1,
     mousewheel: true,
     speed: 1000,
-    spaceBetween: 32,
     breakpoints: {
       320: {
-        direction: 'horizontal'
+        direction: 'horizontal',
+        spaceBetween: 20
       },
       993: {
-        direction: 'vertical'
+        direction: 'vertical',
+        spaceBetween: 32
       }
     }
+  });
+  window.addEventListener('resize', () => {
+    workSwiper.update();
   });
 }
 
